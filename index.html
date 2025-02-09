@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Temperature Converter</h1>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <div class="container">
+            <form id="converterForm">
+                <label for="temperature">Enter Temperature:</label>
+                <input type="number" id="temperature" name="temperature" required>
+                
+                <label for="unit">Select Unit:</label>
+                <select id="unit" name="unit">
+                    <option value="celsius">Celsius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+                </select>
+                
+                <button type="submit">Convert</button>
+            </form>
+            
+            <div id="result">
+                <h2>Conversion Result:</h2>
+                <p id="convertedTemperature"></p>
+                <p id="explanation"></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Temperature Converter. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
