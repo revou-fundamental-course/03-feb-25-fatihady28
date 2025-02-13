@@ -1,50 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temperature Converter</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Konversi Suhu</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <h1>Temperature Converter</h1>
-        </div>
+    <header class="main-header">
+        <h1>Konversi Suhu</h1>
     </header>
 
-    <!-- Main Content Section -->
     <main>
-        <div class="container">
+        <!-- Introduction -->
+        <section class="intro-section">
+            <p>Masukkan suhu dalam derajat Celcius (&deg;C) ke kotak di bawah, lalu klik tombol konversi untuk mendapatkan hasil dalam Fahrenheit (&deg;F).</p>
+        </section>
+
+        <!-- Form Input Suhu Yang Ingin Dikonversi -->
+        <section>
             <form id="converterForm">
-                <label for="temperature">Enter Temperature:</label>
-                <input type="number" id="temperature" name="temperature" required>
-                
-                <label for="unit">Select Unit:</label>
-                <select id="unit" name="unit">
-                    <option value="celsius">Celsius</option>
-                    <option value="fahrenheit">Fahrenheit</option>
-                </select>
-                
-                <button type="submit">Convert</button>
+                <div class="input-group">
+                    <label for="main-input">Celcius (&deg;C):</label>
+                    <input type="text" id="main-input" required>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn-konversi">Konversi</button>
+                    <button type="button" id="resetButton" class="btn-reset">Reset</button>
+                    <button type="button" id="reverseButton" class="btn-reverse">Reverse</button>
+                </div>
             </form>
-            
-            <div id="result">
-                <h2>Conversion Result:</h2>
-                <p id="convertedTemperature"></p>
-                <p id="explanation"></p>
+        </section>
+
+        <!-- Hasil Konversi -->
+        <section>
+            <div class="input-group">
+                <label for="main-result">Fahrenheit (&deg;F):</label>
+                <input type="text" id="main-result" readonly>
             </div>
-        </div>
+        </section>
+
+        <!-- Cara Konversi Suhu -->
+        <section>
+            <div class="input-group">
+                <label for="cara-konversi">Cara Konversi:</label>
+                <input type="text" id="cara-konversi" readonly>
+            </div>
+        </section>
+
+        <!-- Penjelasan Rumus Konversi Suhu -->
+        <section class="formula-section">
+            <header>
+                <h3>Rumus: Celcius (&deg;C) ke Fahrenheit (&deg;F)</h3>
+            </header>
+            <hr>
+            <article>
+                <p>Suhu <span class="remark">S</span> dalam Fahrenheit (&deg;F) sama dengan suhu <span class="remark">S</span> dalam Celcius (&deg;C) dikali 9/5, ditambah 32.</p>
+                <p>S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> × 9/5) + 32</p>
+            </article>
+        </section>
     </main>
 
-    <!-- Footer Section -->
     <footer>
-        <div class="container">
-            <p>&copy; 2023 Temperature Converter. All rights reserved.</p>
-        </div>
+        <p>Copyright Muhammad Fatih Hady</p>
     </footer>
 
     <script src="js/script.js"></script>
 </body>
+
 </html>
